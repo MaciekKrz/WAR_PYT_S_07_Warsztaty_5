@@ -1,0 +1,20 @@
+{% extends "base_page.html" %}
+
+{% block content %}
+
+<h2>User {{user.first_name}} :</h2>
+
+{% for user in user %}
+<ul>
+    <li>Nickname:<strong>{{user.username}}</strong></li>
+    <li>First Name:<strong>{{user.first_name}}</strong></li>
+    <li>Last Name:<strong>{{user.last_name}}</strong></li>
+    <li>Email:<strong>{{user.email}}</strong></li>
+    <li>Is Active:<strong>{{user.is_active}}</strong></li>
+    <li>Joined:<strong>{{user.date_joined}}</strong></li>
+</ul>
+{% endfor %}
+
+<a href="{% url 'main' %}">Main</a>
+
+{% endblock %}

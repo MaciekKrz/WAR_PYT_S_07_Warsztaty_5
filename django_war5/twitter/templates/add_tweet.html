@@ -1,0 +1,17 @@
+{% extends "base_page.html" %}
+
+{% block content %}
+
+<h2>Add Tweet:</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{  form.as_p }}
+
+   <input type="submit" value="Add_Tweet">
+
+</form>
+
+<a href="{% url 'main' %}">Main</a>
+
+{% endblock %}

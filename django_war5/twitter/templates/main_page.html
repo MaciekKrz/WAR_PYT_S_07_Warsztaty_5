@@ -1,0 +1,17 @@
+{% extends "base_page.html" %}
+
+{% block content %}
+
+<h2>Tweets:</h2>
+<ul>
+    {% for tweet in tweets %}
+        <li><h4> {{  tweet.content }}</h4>
+            Create:<a href="{% url 'user' user_id %}">{{  tweet.user }}</a><br>
+         {{  tweet.creation_date }} </li>
+    {% endfor %}
+</ul>
+
+
+<a href="{% url 'add_tweet' %}">Add TWEET</a>
+
+{% endblock %}
